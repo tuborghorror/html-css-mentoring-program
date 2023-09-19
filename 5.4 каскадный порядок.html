@@ -1,0 +1,35 @@
+<p>Каскадный порядок
+  Какой стиль будет использоваться при наличии более одного стиля, заданного для элемента HTML?
+
+  Вообще говоря, мы можем сказать, что все стили будут "Каскад" в новый "виртуальный" стиль лист по следующим правилам,
+  где номер один имеет наивысший приоритет:
+
+  Встроенный стиль (внутри элемента HTML)
+  Внешние и внутренние таблицы стилей (в разделе head)
+  Браузер по умолчанию
+  Таким образом, встроенный стиль (внутри определенного элемента HTML) имеет наивысший приоритет, что означает, что он
+  будет переопределять стиль, определенный внутри тега head, или в Внешняя таблица стилей или значение по умолчанию
+  обозревателя.</p>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <style>
+    body {
+      background-color: linen;
+    }
+  </style>
+</head>
+
+<body style="background-color: lightcyan">
+
+  <h1>Multiple Styles Will Cascade into One</h1>
+  <p>In this example, the background color is set inline, in an internal stylesheet, and in an external stylesheet.</p>
+  <p>Try experimenting by removing styles to see how the cascading stylesheets work. (try removing the inline first,
+    then the internal, then the external)</p>
+
+</body>
+
+</html>

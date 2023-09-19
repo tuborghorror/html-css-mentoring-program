@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<h3>Несколько таблиц стилей</h3>
+
+Однако если внутренний стиль определен перед ссылкой на внешнюю таблицу стилей, элементы H1 будут "navy":
+
+<head>
+  <style>
+    h1 {
+      color: orange;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<body>
+
+  <h1>This is a heading</h1>
+  <p>The style of this document is a combination of an external stylesheet, and internal style</p>
+
+</body>
+
+
+</html>
