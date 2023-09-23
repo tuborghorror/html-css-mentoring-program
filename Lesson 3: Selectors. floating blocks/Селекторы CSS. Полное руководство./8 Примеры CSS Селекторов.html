@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Селекторы</title>
+  <style>
+    /* Универсальный селектор */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Селектор по типу элемента */
+    h1 {
+      color: blue;
+    }
+
+    /* Селектор по атрибуту класса */
+    .highlight {
+      background-color: yellow;
+    }
+
+    /* Селектор по атрибуту ID */
+    #special {
+      font-weight: bold;
+    }
+
+    /* Селектор по атрибуту */
+    [data-attribute] {
+      font-style: italic;
+    }
+
+    /* Селекторы по атрибутам с операторами и флагами */
+    [data-attribute^="start"] {
+      color: green;
+    }
+
+    /* Селектор по вложенным потомкам */
+    article p {
+      font-size: 20px;
+    }
+
+    /* Селектор по прямым потомкам */
+    article>ul {
+      list-style: circle;
+    }
+
+    /* Комбинатор смежных селекторов */
+    h2~p {
+      border: 1px solid rgb(211, 15, 15);
+    }
+
+    /* Комбинатор соседних элементов */
+    h2+p {
+      margin-top: 35px;
+    }
+
+    /* Селекторы по псевдо-классам */
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Селекторы по псевдо-элементам */
+    p::first-line {
+      font-weight: italic;
+    }
+
+    /* Комбинация типов селекторов */
+    div.highlight p {
+      color: red;
+    }
+
+    /* Селекторы CSS 4-го уровня (пример) */
+    :not(p) {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Примеры CSS Селекторов</h1>
+
+  <p class="highlight">Этот абзац имеет класс "highlight".</p>
+
+  <p id="special">Этот абзац имеет атрибут ID "special".</p>
+
+  <p data-attribute="example">Этот абзац имеет атрибут "data-attribute".</p>
+
+  <p data-attribute="start-with">Этот абзац начинается с "start-with".</p>
+
+  <article>
+    <h2>Заголовок статьи</h2>
+    <p>Этот абзац внутри статьи.</p>
+    <ul>
+      <li>Пункт 1</li>
+      <li>Пункт 2</li>
+    </ul>
+  </article>
+
+  <h2>Другой заголовок</h2>
+  <p>Этот абзац не является потомком статьи.</p>
+
+  <a href="#">Ссылка</a>
+
+  <div class="highlight">
+    <p>Этот абзац находится внутри div с классом "highlight".</p>
+  </div>
+</body>
+
+</html>

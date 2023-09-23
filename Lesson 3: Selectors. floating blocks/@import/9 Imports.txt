@@ -1,0 +1,11 @@
+Синтаксис
+
+@import url;
+@import url layer;
+@import url layer(layer-name);
+@import url layer(layer-name) supports(supports-condition);
+@import url layer(layer-name) supports(supports-condition) list-of-media-queries;
+@import url layer(layer-name) list-of-media-queries;
+@import url supports(supports-condition);
+@import url supports(supports-condition) list-of-media-queries;
+@import url list-of-media-queries;
