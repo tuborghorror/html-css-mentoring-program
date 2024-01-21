@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+  /* Относительное позиционирование */
+  .box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+  }
+
+  #two {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: blue;
+  }
+</style>
+
+<body>
+  <!-- Относительное позиционирование
+Относительно позиционированные элементы смещены на определённую величину от их обычной позиции в документе, но без смещения, влияющего на другие элементы. В приведённом ниже примере обратите внимание, как размещаются другие элементы, как если бы «Two» занимало пространство своего обычного расположения. -->
+  <h3> Относительное позиционирование</h3>
+  <div class="box" id="one">One</div>
+  <div class="box" id="two">Two</div>
+  <div class="box" id="three">Three</div>
+  <div class="box" id="four">Four</div>
+</body>
+
+</html>

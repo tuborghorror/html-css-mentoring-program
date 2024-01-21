@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+  .wrapper {
+    position: relative;
+  }
+
+  .dashed-box {
+    position: relative;
+    z-index: 1;
+    border: dashed;
+    height: 8em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+  }
+
+  .gold-box {
+    position: absolute;
+    z-index: 3;
+    /* помещаем .gold-box поверх .green-box и .dashed-box */
+    background: gold;
+    width: 80%;
+    left: 60px;
+    top: 3em;
+  }
+
+  .green-box {
+    position: absolute;
+    z-index: 2;
+    /* помещаем .green-box поверх .dashed-box */
+    background: lightgreen;
+    width: 20%;
+    left: 65%;
+    top: -25px;
+    height: 7em;
+    opacity: 0.9;
+  }
+</style>
+
+<body>
+  <h5>z-index</h5>
+  <!-- CSS-свойство z-index определяет положение позиционированного элемента и его дочерних элементов или флекс-элементов по оси z. Перекрывающие элементы с большим значением z-index будут накладываться поверх элементов с меньшим z-index. -->
+
+  <div class="wrapper">
+    <div class="dashed-box">Пунктирный блок</div>
+    <div class="gold-box">Блок золотого цвета</div>
+    <div class="green-box">Зелёный блок</div>
+  </div>
+</body>
+
+</html>

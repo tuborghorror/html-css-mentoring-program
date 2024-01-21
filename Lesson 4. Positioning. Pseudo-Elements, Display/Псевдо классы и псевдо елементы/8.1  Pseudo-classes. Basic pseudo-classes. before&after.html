@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+  .first {
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  article p:first-child {
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  a:link,
+  a:visited {
+    color: rebeccapurple;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: hotpink;
+  }
+
+  text p::first-line {
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  text2 p:first-child::first-line {
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  .box::before {
+    content: "This should show before the other content. ";
+  }
+
+  .box::after {
+    content: " ➥";
+  }
+
+  .box2::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+    border: 1px solid black;
+  }
+</style>
+
+<body>
+  <h5>Простой пример псевдокласса</h5>
+
+  <article>
+    <p class="first">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi
+      tomatillo
+      melon azuki bean garlic.</p>
+
+    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
+      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+  </article>
+
+  <article>
+    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+      melon azuki bean garlic.</p>
+
+    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
+      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+  </article>
+
+  <h5>Псевдоклассы действий пользователя</h5>
+
+  <p>:hover- упомянутое выше; это применимо только в том случае, если пользователь наводит указатель на элемент, обычно
+    на
+    ссылку.</p>
+  <p>:focus— применяется только в том случае, если пользователь фокусирует элемент, щелкая мышью или используя элементы
+    управления с клавиатуры.</p>
+
+  <p><a href="">Hover over me</a></p>
+
+  <h5>Псевдоэлементы
+  </h5>
+
+  <text>
+    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+      melon azuki bean garlic.</p>
+
+    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
+      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+  </text>
+
+  <h5>Объединение псевдоклассов и псевдоэлементов</h5>
+
+  <text2>
+    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+      melon azuki bean garlic.</p>
+
+    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
+      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+  </text2>
+
+  <h5>Генерация контента с помощью ::before и ::after
+  </h5>
+
+  <p class="box">Content in the box in my HTML page.</p>
+
+  <p class="box2">Content in the box in my HTML page.</p>
+
+</body>
+
+</html>

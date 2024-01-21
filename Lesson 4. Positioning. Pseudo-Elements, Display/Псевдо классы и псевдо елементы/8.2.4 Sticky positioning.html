@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  dl {
+    margin: 0;
+    padding: 24px 0 0 0;
+  }
+
+  dt {
+    background: #b8c1c8;
+    border-bottom: 1px solid #989ea4;
+    border-top: 1px solid #717d85;
+    color: #fff;
+    font:
+      bold 18px/21px Helvetica,
+      Arial,
+      sans-serif;
+    margin: 0;
+    padding: 2px 0 0 12px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+  }
+
+  dd {
+    font:
+      bold 20px/45px Helvetica,
+      Arial,
+      sans-serif;
+    margin: 0;
+    padding: 0 0 0 12px;
+    white-space: nowrap;
+  }
+
+  dd+dd {
+    border-top: 1px solid #ccc;
+  }
+</style>
+
+<body>
+  <!-- Липкое позиционирование можно рассматривать как гибрид относительного и фиксированного позиционирования. Липкий позиционированный элемент обрабатывается как относительно позиционированный до тех пор, пока он не пересечёт заданный порог, после чего он будет считаться фиксированным, пока не достигнет границы его родителя. Например позиционирует элемент с id "one" относительно до тех пор, пока видовой экран не будет прокручен таким образом, чтобы элемент был меньше 10 пикселей от вершины. Помимо этого порога элемент будет зафиксирован на 10 пикселей сверху.
+
+Типичное использование для липкого позиционирования - для заголовков в алфавитном списке. Заголовок «B» появится чуть ниже элементов, начинающихся с «A», пока они не будут прокручиваться за кадром. Вместо того, чтобы скользить за кадром с остальной частью содержимого, заголовок «B» затем останется фиксированным в верхней части окна просмотра, пока все элементы «B» не будут прокручиваться на экране, и в этот момент он будет закрыт «C», заголовок и т. д. -->
+  <div>
+    <dl>
+      <dt>A</dt>
+      <dd>Andrew W.K.</dd>
+      <dd>Apparat</dd>
+      <dd>Arcade Fire</dd>
+      <dd>At The Drive-In</dd>
+      <dd>Aziz Ansari</dd>
+    </dl>
+    <dl>
+      <dt>C</dt>
+      <dd>Chromeo</dd>
+      <dd>Common</dd>
+      <dd>Converge</dd>
+      <dd>Crystal Castles</dd>
+      <dd>Cursive</dd>
+    </dl>
+    <dl>
+      <dt>E</dt>
+      <dd>Explosions In The Sky</dd>
+    </dl>
+    <dl>
+      <dt>T</dt>
+      <dd>Ted Leo & The Pharmacists</dd>
+      <dd>T-Pain</dd>
+      <dd>Thrice</dd>
+      <dd>TV On The Radio</dd>
+      <dd>Two Gallants</dd>
+    </dl>
+  </div>
+</body>
+
+</html>
