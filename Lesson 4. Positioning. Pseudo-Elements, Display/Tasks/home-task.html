@@ -6,20 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homework</title>
   <style>
-    /* Task 1: Styles for the table */
+    /* Styles for the table */
     table {
       margin: 20px auto;
       /* Center the table horizontally */
       border-collapse: collapse;
+      font-family: Arial, sans-serif;
+      width: 80%;
     }
 
     th,
     td {
-      border: 1px solid black;
-      padding: 8px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
     }
 
-    /* Task 2: Styles for centering content */
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    /* Styles for centering content */
     .center {
       text-align: center;
       /* Horizontal centering */
@@ -27,7 +38,7 @@
       /* Vertical centering */
     }
 
-    /* Task 3: Styles for the fixed footer */
+    /* Styles for the fixed footer */
     .footer {
       position: fixed;
       bottom: 0;
@@ -39,7 +50,7 @@
       /* Center the text */
     }
 
-    /* Task 4: Styles for absolute positioning */
+    /* Styles for absolute positioning */
     .parent {
       position: relative;
       /* Required for absolute positioning */
@@ -60,7 +71,7 @@
       /* Center the element */
     }
 
-    /* Task 5: Styles for the sticky header */
+    /* Styles for the sticky header */
     .header {
       position: sticky;
       top: 0;
@@ -76,34 +87,50 @@
 
 <body>
 
-  <!-- Task 1: Table with colspan and rowspan -->
-  <table border="1">
-    <tr>
-      <td rowspan="2">1</td>
-      <td colspan="2">2</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>4</td>
-    </tr>
+  <!-- Table with content -->
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>30</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>25</td>
+        <td>Canada</td>
+      </tr>
+      <tr>
+        <td>David Brown</td>
+        <td>35</td>
+        <td>UK</td>
+      </tr>
+    </tbody>
   </table>
 
-  <!-- Task 2: Centered content -->
+  <!-- Centered content -->
   <div class="center">
     <p>This is a centered paragraph.</p>
   </div>
 
-  <!-- Task 3: Fixed footer -->
+  <!-- Fixed footer -->
   <footer class="footer">
     This is a fixed footer.
   </footer>
 
-  <!-- Task 4: Absolute positioning -->
+  <!-- Absolute positioning -->
   <div class="parent">
     <div class="child">Centered Absolute Child</div>
   </div>
 
-  <!-- Task 5: Sticky header -->
+  <!-- Sticky header -->
   <header class="header">
     Sticky Header
   </header>
