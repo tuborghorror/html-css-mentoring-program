@@ -1,114 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <style>
-  .first {
-    font-size: 120%;
-    font-weight: bold;
+  /* Отступы */
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid purple;
   }
 
-  article p:first-child {
-    font-size: 120%;
-    font-weight: bold;
+  thead th:nth-child(1) {
+    width: 30%;
   }
 
-  a:link,
-  a:visited {
-    color: rebeccapurple;
-    font-weight: bold;
+  thead th:nth-child(2) {
+    width: 20%;
   }
 
-  a:hover {
-    color: hotpink;
+  thead th:nth-child(3) {
+    width: 15%;
   }
 
-  text p::first-line {
-    font-size: 120%;
-    font-weight: bold;
+  thead th:nth-child(4) {
+    width: 35%;
   }
 
-  text2 p:first-child::first-line {
-    font-size: 120%;
-    font-weight: bold;
+  th,
+  td {
+    padding: 20px;
   }
 
-  .box::before {
-    content: "This should show before the other content. ";
+  /* Типографика */
+
+  html {
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
   }
 
-  .box::after {
-    content: " ➥";
+  thead th,
+  tfoot th {
+    font-family: "Rock Salt", cursive;
   }
 
-  .box2::before {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: rebeccapurple;
-    border: 1px solid black;
+  th {
+    letter-spacing: 2px;
+  }
+
+  td {
+    letter-spacing: 1px;
+  }
+
+  tbody td {
+    text-align: center;
+  }
+
+  tfoot th {
+    text-align: right;
+  }
+
+  /* Графика и цвета */
+
+  thead,
+  tfoot {
+    background: url(leopardskin.jpg);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgb(141, 155, 96);
+  }
+
+  thead th,
+  tfoot th,
+  tfoot td {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 50%));
+    border: 3px solid rgb(176, 87, 87);
+  }
+
+  /* Полосатая зебра */
+
+  tbody tr:nth-child(odd) {
+    background-color: #d5bace;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #828282;
+  }
+
+  tbody tr {
+    background-image: url(noise.png);
+  }
+
+  table {
+    background-color: #000000;
+  }
+
+  /* Заголовок */
+
+  caption {
+    font-family: "Rock Salt", cursive;
+    padding: 20px;
+    font-style: italic;
+    caption-side: bottom;
+    color: #666;
+    text-align: right;
+    letter-spacing: 1px;
   }
 </style>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>UK punk bands</title>
+</head>
+
 <body>
-  <h5>Простой пример псевдокласса</h5>
-
-  <article>
-    <p class="first">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi
-      tomatillo
-      melon azuki bean garlic.</p>
-
-    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
-      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
-  </article>
-
-  <article>
-    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
-      melon azuki bean garlic.</p>
-
-    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
-      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
-  </article>
-
-  <h5>Псевдоклассы действий пользователя</h5>
-
-  <p>:hover- упомянутое выше; это применимо только в том случае, если пользователь наводит указатель на элемент, обычно
-    на
-    ссылку.</p>
-  <p>:focus— применяется только в том случае, если пользователь фокусирует элемент, щелкая мышью или используя элементы
-    управления с клавиатуры.</p>
-
-  <p><a href="">Hover over me</a></p>
-
-  <h5>Псевдоэлементы
-  </h5>
-
-  <text>
-    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
-      melon azuki bean garlic.</p>
-
-    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
-      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
-  </text>
-
-  <h5>Объединение псевдоклассов и псевдоэлементов</h5>
-
-  <text2>
-    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
-      melon azuki bean garlic.</p>
-
-    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
-      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
-  </text2>
-
-  <h5>Генерация контента с помощью ::before и ::after
-  </h5>
-
-  <p class="box">Content in the box in my HTML page.</p>
-
-  <p class="box2">Content in the box in my HTML page.</p>
-
-
+  <table>
+    <caption>A summary of the UK's most famous punk bands</caption>
+    <thead>
+      <tr>
+        <th scope="col">Band</th>
+        <th scope="col">Year formed</th>
+        <th scope="col">No. of Albums</th>
+        <th scope="col">Most famous song</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Buzzcocks</th>
+        <td>1976</td>
+        <td>9</td>
+        <td>Ever fallen in love (with someone you shouldn't've)</td>
+      </tr>
+      <tr>
+        <th scope="row">The Clash</th>
+        <td>1976</td>
+        <td>6</td>
+        <td>London Calling</td>
+      </tr>
+      <tr>
+        <th scope="row">The Damned</th>
+        <td>1976</td>
+        <td>10</td>
+        <td>Smash it up</td>
+      </tr>
+      <tr>
+        <th scope="row">Sex Pistols</th>
+        <td>1975</td>
+        <td>1</td>
+        <td>Anarchy in the UK</td>
+      </tr>
+      <tr>
+        <th scope="row">Sham 69</th>
+        <td>1976</td>
+        <td>13</td>
+        <td>If The Kids Are United</td>
+      </tr>
+      <tr>
+        <th scope="row">Siouxsie and the Banshees</th>
+        <td>1976</td>
+        <td>11</td>
+        <td>Hong Kong Garden</td>
+      </tr>
+      <tr>
+        <th scope="row">Stiff Little Fingers</th>
+        <td>1977</td>
+        <td>10</td>
+        <td>Suspect Device</td>
+      </tr>
+      <tr>
+        <th scope="row">The Stranglers</th>
+        <td>1974</td>
+        <td>17</td>
+        <td>No More Heroes</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row" colspan="2">Total albums</th>
+        <td colspan="2">77</td>
+      </tr>
+    </tfoot>
+  </table>
 </body>
 
 </html>

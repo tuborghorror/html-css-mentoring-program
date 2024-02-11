@@ -2,113 +2,160 @@
 <html>
 
 <style>
-  .first {
-    font-size: 120%;
-    font-weight: bold;
+  P {
+    text-align: center
   }
 
-  article p:first-child {
-    font-size: 120%;
-    font-weight: bold;
+  H2 {
+    text-align: center
   }
 
-  a:link,
-  a:visited {
-    color: rebeccapurple;
-    font-weight: bold;
+  P.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
   }
 
-  a:hover {
-    color: hotpink;
-  }
-
-  text p::first-line {
-    font-size: 120%;
-    font-weight: bold;
-  }
-
-  text2 p:first-child::first-line {
-    font-size: 120%;
-    font-weight: bold;
-  }
-
-  .box::before {
-    content: "This should show before the other content. ";
-  }
-
-  .box::after {
-    content: " ➥";
-  }
-
-  .box2::before {
-    content: "";
+  IMG.displayed {
     display: block;
-    width: 100px;
-    height: 100px;
-    background-color: rebeccapurple;
-    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  DIV.container {
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle
+  }
+
+  div.container3 {
+    height: 10em;
+    position: relative
+  }
+
+  /* 1 */
+  div.container3 p {
+    margin: 0;
+    position: absolute;
+    /* 2 */
+    top: 50%;
+    /* 3 */
+    transform: translate(0, -50%)
+  }
+
+  /* 4 */
+
+  div.container5 {
+    height: 10em;
+    display: flex;
+    align-items: center
+  }
+
+  div.container5 p {
+    margin: 0
+  }
+
+  div.container4 {
+    height: 10em;
+    position: relative
+  }
+
+  div.container4 p {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+
+  div.container6 {
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+  div.container6 p {
+    margin: 0
+  }
+
+  section {
+    background: black;
+    color: white;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
   }
 </style>
 
 <body>
-  <h5>Простой пример псевдокласса</h5>
+  <h4>Каскадные таблицы стилей CSS советы & приёмы</h4>
+  <h5>Центрирование</h5>
 
-  <article>
-    <p class="first">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi
-      tomatillo
-      melon azuki bean garlic.</p>
+  <div>
+    Общая функция CSS — центрирование текста или изображения. Фактически, существует три вида центрирования:
 
-    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
-      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
-  </article>
+    Центрирование строк текста
+    Центрирование текстового блока или изображения
+    Центрирование текстового блока или изображения по вертикали
+    В последних реализациях CSS вы можете также использовать возможности Уровня 3 (CSS3), позволяющие выровнять по
+    центру абсолютно позиционированные элементы:
 
-  <article>
-    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
-      melon azuki bean garlic.</p>
+    Выравнивание по вертикали в уровне 3
+    Выравнивание по вертикали и горизонтали в уровне 3
+    Выравнивание в области просмотра в уровне 3
+  </div>
 
-    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
-      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
-  </article>
+  <h5>Центрирование строк текста</h5>
 
-  <h5>Псевдоклассы действий пользователя</h5>
+  <h2>это центрирование строк текста в абзаце или заголовке</h2>
 
-  <p>:hover- упомянутое выше; это применимо только в том случае, если пользователь наводит указатель на элемент, обычно
-    на
-    ссылку.</p>
-  <p>:focus— применяется только в том случае, если пользователь фокусирует элемент, щелкая мышью или используя элементы
-    управления с клавиатуры.</p>
+  <h5>Центрирование блока или изображения</h5>
 
-  <p><a href="">Hover over me</a></p>
+  <P class="blocktext">Этот довольно узкий блок текста центрирован. Заметьте, что строки внутри блока не центрированы
+    (они выровнены влево), в отличие от предыдущего примера.</P>
 
-  <h5>Псевдоэлементы
-  </h5>
+  <IMG class="displayed" src="./woolly-mc.png" alt="...">
 
-  <text>
-    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
-      melon azuki bean garlic.</p>
+  <h5>Вертикальное центрирование</h5>
 
-    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
-      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
-  </text>
+  <DIV class="container">
+    <P>Этот маленький абзац центрирован вертикально.</P>
+  </DIV>
 
-  <h5>Объединение псевдоклассов и псевдоэлементов</h5>
+  <h5>Центрирование по вертикали в CSS уровня 3</h5>
 
-  <text2>
-    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
-      melon azuki bean garlic.</p>
+  <div class=container3>
+    <p>Этот абзац…
+  </div>
 
-    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
-      greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
-  </text2>
+  <div class=container5>
+    <p>Этот абзац…
+  </div>
 
-  <h5>Генерация контента с помощью ::before и ::after
-  </h5>
+  <h5>Вертикальное и горизонтальное центрирование в CSS уровня 3</h5>
 
-  <p class="box">Content in the box in my HTML page.</p>
+  <div class=container4>
+    <p>Центр!
+  </div>
 
-  <p class="box2">Content in the box in my HTML page.</p>
+  <div class=container6>
+    <p>Центр!
+  </div>
 
+  <h5>Вертикальное и горизонтальное центрирование в CSS уровня 3</h5>
 
+  <section>
+    <h1>Красиво выровнен по центру</h1>
+    <p>Этот текстовый блок выровнен вертикально по центру.
+    <p>И горизонтально, если окно достаточно широкое.
+  </section>
 </body>
 
 </html>
