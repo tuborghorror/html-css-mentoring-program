@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<!-- /* Ключевые слова */
+background-repeat: repeat-x;
+background-repeat: repeat-y;
+background-repeat: repeat;
+background-repeat: space;
+background-repeat: round;
+background-repeat: no-repeat;
+
+/*Два значения: горизонтальное | вертикальное*/
+background-repeat: repeat space;
+background-repeat: repeat repeat;
+background-repeat: round space;
+background-repeat: no-repeat round;
+
+/* Глобальные значения */
+background-repeat: inherit;
+background-repeat: initial;
+background-repeat: unset; -->
+
+<head>
+  <style>
+    /* Совместно для всех DIVS в примере */
+    li {
+      margin-bottom: 12px;
+    }
+
+    div {
+      background-image: url("luna_polnolunie_noch_135745_300x188.jpg");
+      width: 500px;
+      height: 500px;
+    }
+
+    /* повторение фона CSS */
+    .one {
+      background-repeat: no-repeat;
+    }
+
+    .two {
+      background-repeat: repeat;
+    }
+
+    .three {
+      background-repeat: repeat-x;
+    }
+
+    .four {
+      background-repeat: repeat-y;
+    }
+
+    /* Несколько изображений */
+    .five {
+      background-image: url("luna_polnolunie_noch_135745_300x188.jpg"),
+        url(https://developer.mozilla.org/static/img/favicon32.png);
+      background-repeat: repeat-x, repeat-y;
+      height: 400px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <ol>
+    <li>
+      no-repeat
+      <div class="one">&nbsp;</div>
+    </li>
+    <li>
+      repeat
+      <div class="two">&nbsp;</div>
+    </li>
+    <li>
+      repeat-x
+      <div class="three">&nbsp;</div>
+    </li>
+    <li>
+      repeat-y
+      <div class="four">&nbsp;</div>
+    </li>
+    <li>
+      repeat-x, repeat-y (multiple images)
+      <div class="five">&nbsp;</div>
+    </li>
+  </ol>
+
+
+</body>
+
+</html>
